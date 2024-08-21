@@ -1,0 +1,5 @@
+com/example/movieapi/controller/MovieController.class
+com/example/movieapi/repository/MovieRepository.class
+com/example/movieapi/service/MovieService.class
+com/example/demo/MovieApiApplication.class
+com/example/movieapi/model/Movie.class

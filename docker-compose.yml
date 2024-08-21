@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: movieapi
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: yourpassword
+    ports:
+      - "5432:5432"
+    networks:
+      - movie-network
+
+  # movie-app:
+  #   build: .
+  #   depends_on:
+  #     - postgres
+  #   environment:
+  #     SPRING_PROFILES_ACTIVE: prod
+  #   ports:
+  #     - "8080:8080"
+  #   networks:
+  #     - movie-network
+
+networks:
+  movie-network:
+    driver: bridge
